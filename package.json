@@ -1,0 +1,17 @@
+{
+  "name": "findit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FindIt: Lost and Found with Smart Matching",
+  "scripts": {
+    "postinstall": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n server,client -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "start": "npm --prefix server start",
+    "build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "evaluate": "npm --prefix server run evaluate"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
